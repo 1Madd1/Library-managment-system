@@ -1,5 +1,7 @@
 package org.djordje.entity;
 
+import java.util.Objects;
+
 public class Book {
     private String title;
     private String author;
@@ -12,11 +14,11 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, String author, String isbn, boolean available) {
+    public Book(String title, String author, String isbn) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.available = available;
+        this.available = true;
     }
 
     public String getTitle() {
@@ -54,6 +56,18 @@ public class Book {
     @Override
     public String toString() {
         return "Title: " + title + "; Author: " + author + " ISBN: " + isbn + "; Availability: " + availability() + "\n";
+    }
+    /**
+     * equals method used to compare two Book classes
+     * @param o - the book class to be compared
+     * @return - true if they point to the same class or have same isbn and are both available, otherwise return false
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return isAvailable() == book.isAvailable() && Objects.equals(getIsbn(), book.getIsbn());
     }
 
     /**

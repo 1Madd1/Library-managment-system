@@ -1,6 +1,8 @@
 package org.djordje.entity;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Library {
     private List<Book> bookInventory;
@@ -10,11 +12,26 @@ public class Library {
      * Creating empty and parameterized constructors
      */
     public Library() {
+        this.bookInventory = new ArrayList<>();
+        this.patrons = new ArrayList<>();
     }
 
     public Library(List<Book> bookInventory, List<Patron> patrons) {
         this.bookInventory = bookInventory;
         this.patrons = patrons;
+    }
+
+    /**
+     * equals method used to compare two Library classes
+     * @param o - the library class to be compared
+     * @return - true if they point to the same class or have the same books and patrons, otherwise return false
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Library library = (Library) o;
+        return Objects.equals(bookInventory, library.bookInventory) && Objects.equals(patrons, library.patrons);
     }
 
     /**
@@ -41,11 +58,15 @@ public class Library {
      */
     public boolean checkOutBook(Book book, Patron patron){
         if (book.isAvailable()){
-            book.setAvailable(false);
-            patron.addBorrowedBook(book);
-            return true;
+            if(this.patrons.contains(patron)){
+                book.setAvailable(false);
+                patron.addBorrowedBook(book);
+                return true;
+            }
+            System.out.println("Patron " + patron.getName() + " is not registered in the library!");
+        } else {
+            System.out.println("The book" + book.getTitle() + " is not available!");
         }
-        System.out.println("The book" + book.getTitle() + " is not available!");
 
         return false;
     }
@@ -57,11 +78,15 @@ public class Library {
      */
     public boolean returnBook(Book book,Patron patron){
         if (!book.isAvailable()){
-            book.setAvailable(true);
-            patron.removeBorrowedBook(book);
-            return true;
+            if(this.patrons.contains(patron)){
+                book.setAvailable(true);
+                patron.removeBorrowedBook(book);
+                return true;
+            }
+            System.out.println("Patron " + patron.getName() + " is not registered in the library!");
+        } else {
+            System.out.println("The book" + book.getTitle() + " has already been returned!");
         }
-        System.out.println("The book" + book.getTitle() + " has already been returned!");
 
         return false;
     }
@@ -78,5 +103,14 @@ public class Library {
         for (Patron p : patrons) {
             System.out.println(p);
         }
+        System.out.println("-------------------------------------");
+    }
+
+    /**
+     * clearData method that is used to clear all data from the library
+     */
+    public void clearData(){
+        bookInventory.clear();
+        patrons.clear();
     }
 }

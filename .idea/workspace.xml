@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63200e60-d459-49ec-8fbf-b98a8934fd14" name="Changes" comment="Added entity package which stores entity classes Book, Library and Patron.&#10;Added library package which contains library related classes such as LibraryTransaction class for managing library transactions&#10;Added enum package for storing enum classes such as TransactionType enum class">
+    <list default="true" id="63200e60-d459-49ec-8fbf-b98a8934fd14" name="Changes" comment="Added equals methods to all needed classes.&#10;Added Test classes for all entity classes and for transaction class.&#10;Added the main code in Main class.&#10;Changed some logistics in methods to some classes.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/djordje/entity/BookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/djordje/entity/LibraryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/djordje/entity/PatronTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/djordje/library/LibraryTransactionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djordje/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djordje/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djordje/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djordje/entity/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/djordje/entity/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djordje/entity/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djordje/entity/Patron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djordje/entity/Patron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djordje/library/LibraryTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djordje/library/LibraryTransaction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,18 +28,19 @@
       <list>
         <option value="Class" />
         <option value="Enum" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "1Madd1"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;1Madd1&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -38,25 +49,141 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2d8V6VJVE9dyZjyboUtolXR8RZD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Djordje/personal/Vezbanje/Apps/Library-managment-system&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.djordje.library" />
+      <recent name="org.djordje.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in Library-managment-system">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.djordje.Main" />
+      <module name="Library-managment-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.djordje.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in Library-managment-system" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Library-managment-system" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Library-managment-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.djordje.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.djordje.entity" />
+      <option name="MAIN_CLASS_NAME" value="org.djordje.entity.LibraryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTransactionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Library-managment-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.djordje.library.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.djordje.library" />
+      <option name="MAIN_CLASS_NAME" value="org.djordje.library.LibraryTransactionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatronTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Library-managment-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.djordje.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.djordje.entity" />
+      <option name="MAIN_CLASS_NAME" value="org.djordje.entity.PatronTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.All in Library-managment-system" />
+      <item itemvalue="JUnit.LibraryTest" />
+      <item itemvalue="JUnit.LibraryTransactionTest" />
+      <item itemvalue="JUnit.PatronTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in Library-managment-system" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PatronTest" />
+        <item itemvalue="JUnit.LibraryTest" />
+        <item itemvalue="JUnit.LibraryTransactionTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,7 +192,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709389518924</updated>
-      <workItem from="1709389520032" duration="6886000" />
+      <workItem from="1709389520032" duration="8693000" />
+      <workItem from="1709398270564" duration="278000" />
+      <workItem from="1709398564952" duration="8665000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project">
       <option name="closed" value="true" />
@@ -83,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709395628418</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removed toString method since it's redundant with the new displayLibraryStatistics method which displays library statistics.">
+      <option name="closed" value="true" />
+      <created>1709396515831</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709396515831</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +229,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting project" />
     <MESSAGE value="Added entity package which stores entity classes Book, Library and Patron.&#10;Added library package which contains library related classes such as LibraryTransaction class for managing library transactions&#10;Added enum package for storing enum classes such as TransactionType enum class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added entity package which stores entity classes Book, Library and Patron.&#10;Added library package which contains library related classes such as LibraryTransaction class for managing library transactions&#10;Added enum package for storing enum classes such as TransactionType enum class" />
+    <MESSAGE value="Removed toString method since it's redundant with the new displayLibraryStatistics method which displays library statistics." />
+    <MESSAGE value="Added equals methods to all needed classes.&#10;Added Test classes for all entity classes and for transaction class.&#10;Added the main code in Main class.&#10;Changed some logistics in methods to some classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added equals methods to all needed classes.&#10;Added Test classes for all entity classes and for transaction class.&#10;Added the main code in Main class.&#10;Changed some logistics in methods to some classes." />
   </component>
 </project>

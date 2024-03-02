@@ -5,6 +5,7 @@ import org.djordje.entity.Patron;
 import org.djordje.enums.TransactionType;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class LibraryTransaction {
     private Date transactionDate;
@@ -59,5 +60,17 @@ public class LibraryTransaction {
     @Override
     public String toString() {
         return "Date of transaction: " + transactionDate + "\nBook: " + book + "\nPatron: " + patron + "\nTransaction type: " + type;
+    }
+    /**
+     * equals method used to compare two LibraryTransaction classes
+     * @param o - the library transaction class to be compared
+     * @return - true if they point to the same class or have the same date, otherwise return false
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LibraryTransaction that = (LibraryTransaction) o;
+        return Objects.equals(getTransactionDate(), that.getTransactionDate()) && Objects.equals(getBook(), that.getBook()) && Objects.equals(getPatron(), that.getPatron()) && getType() == that.getType();
     }
 }
