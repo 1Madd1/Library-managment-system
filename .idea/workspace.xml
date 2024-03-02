@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63200e60-d459-49ec-8fbf-b98a8934fd14" name="Changes" comment="Starting project">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="63200e60-d459-49ec-8fbf-b98a8934fd14" name="Changes" comment="Added entity package which stores entity classes Book, Library and Patron.&#10;Added library package which contains library related classes such as LibraryTransaction class for managing library transactions&#10;Added enum package for storing enum classes such as TransactionType enum class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djordje/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djordje/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djordje/entity/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djordje/entity/Library.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +23,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "1Madd1"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c7518867-8d40-4c8e-bff1-98fdfcb6093f" />
+        <option name="url" value="https://github.com/1Madd1/Library-managment-system.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectId" id="2d8V6VJVE9dyZjyboUtolXR8RZD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709389518924</updated>
-      <workItem from="1709389520032" duration="5768000" />
+      <workItem from="1709389520032" duration="6886000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project">
       <option name="closed" value="true" />
@@ -64,7 +75,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709389606308</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added entity package which stores entity classes Book, Library and Patron.&#10;Added library package which contains library related classes such as LibraryTransaction class for managing library transactions&#10;Added enum package for storing enum classes such as TransactionType enum class">
+      <option name="closed" value="true" />
+      <created>1709395628418</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709395628418</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,6 +91,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting project" />
+    <MESSAGE value="Added entity package which stores entity classes Book, Library and Patron.&#10;Added library package which contains library related classes such as LibraryTransaction class for managing library transactions&#10;Added enum package for storing enum classes such as TransactionType enum class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added entity package which stores entity classes Book, Library and Patron.&#10;Added library package which contains library related classes such as LibraryTransaction class for managing library transactions&#10;Added enum package for storing enum classes such as TransactionType enum class" />
   </component>
 </project>

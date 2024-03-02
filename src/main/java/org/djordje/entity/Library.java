@@ -7,7 +7,7 @@ public class Library {
     private List<Patron> patrons;
 
     /**
-     * Creating empty and parameterized constructors and toString method for library details
+     * Creating empty and parameterized constructors
      */
     public Library() {
     }
@@ -15,11 +15,6 @@ public class Library {
     public Library(List<Book> bookInventory, List<Patron> patrons) {
         this.bookInventory = bookInventory;
         this.patrons = patrons;
-    }
-
-    @Override
-    public String toString() {
-        return "Book inventory: " + bookInventory + "\nPatrons: " + patrons;
     }
 
     /**
@@ -69,5 +64,19 @@ public class Library {
         System.out.println("The book" + book.getTitle() + " has already been returned!");
 
         return false;
+    }
+
+    /**
+     * displayLibraryStatistics method for displaying library statistics
+     */
+    public void displayLibraryStatistics(){
+        System.out.println("Book inventory:");
+        for (Book b : bookInventory) {
+            System.out.println(b);
+        }
+        System.out.println("Patrons:");
+        for (Patron p : patrons) {
+            System.out.println(p);
+        }
     }
 }
